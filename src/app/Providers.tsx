@@ -18,7 +18,7 @@ export function Providers({children}: { children: React.ReactNode }) {
 
     return (
         <HeroUIProvider>
-        <NextThemesProvider attribute="class" defaultTheme="dark">
+        <NextThemesProvider attribute={"class"} defaultTheme="dark">
             {children}
         </NextThemesProvider>
         </HeroUIProvider>

@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import { Providers } from "./providers";
+import { Providers } from "./Providers";
 import Header from "./components/Header/Header";
 
 export const metadata: Metadata = {
@@ -31,8 +31,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <Header/>
-          {children}
+          <div className="bg-white dark:bg-slate-800 w-full h-full">
+            <Header/>
+            {children}
+          </div>
         </Providers>
       </body>
     </html>
