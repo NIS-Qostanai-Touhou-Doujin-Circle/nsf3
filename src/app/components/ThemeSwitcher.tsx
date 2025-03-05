@@ -21,11 +21,11 @@ export function ThemeSwitcher() {
 
   return (
     <div>
-      <Button onPress={toggleTheme} isIconOnly radius="full">
+      <Button variant="light" onPress={toggleTheme} isIconOnly radius="lg" size="lg">
         {theme === 'light' ? (
-          <MoonIcon className="h-6 w-6 text-gray-800" />
+          <MoonIcon className="h-6 w-6 text-[#0f4257]" />
         ) : (
-          <SunIcon className="h-6 w-6 text-yellow-500" />
+          <SunIcon className="h-6 w-6 text-[#DBEAFE]" />
         )}
       </Button>
     </div>

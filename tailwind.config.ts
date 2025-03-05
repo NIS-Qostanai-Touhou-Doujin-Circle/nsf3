@@ -8,14 +8,33 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",    
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
-  }, 
   darkMode: "class",
-  plugins: [heroui()],
+  theme: {
+    extend: {},
+  },
+  plugins: [heroui({
+    themes: {
+      light: {
+        colors: {
+          background: "#ECEDEE",
+          
+          primary: {
+            foreground: "#DBEAFE",
+            DEFAULT: "#ECEDEE",
+          }
+        }
+      },
+      dark: {
+        colors: {
+          background: "#0A2530",
+          
+          primary: {
+            foreground: "#0f4257",
+            DEFAULT: "#ECEDEE",
+          }
+        }
+      }
+    }
+  })],
+
 } satisfies Config;

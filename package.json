@@ -9,6 +9,7 @@
     "lint": "next lint",
     "tauri": "tauri",
     "backend": "cd backend && python app.py",
+    "parser": "cd backend && python parser.py",
     "dev:all": "concurrently \"npm run dev\" \"npm run backend\""
   },
   "dependencies": {

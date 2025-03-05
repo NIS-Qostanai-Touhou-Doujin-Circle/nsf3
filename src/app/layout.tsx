@@ -13,7 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 import { Providers } from "./Providers";
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import RegistrationForm from "./reg/page";
+import { useState } from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,15 +28,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-y-scroll`}
       >
         <Providers>
-          <div className="bg-white dark:bg-slate-800 w-full h-full">
-            <Header/>
-            {children}
+          <div className="bg-background">
+              <Header/>
+                {children}
+              <Footer />
           </div>
         </Providers>
       </body>
